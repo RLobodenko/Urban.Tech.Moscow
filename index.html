@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Главная</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+
+<script type="text/javascript">
+ window.onload = f()
+
+	let arr = new Array();
+	const arrOfLinks = []
+	window.arrOfLinks = arrOfLinks
+	async function f() {
+		var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    		targetUrl = 'http://194.58.104.67:8000/urls/';
+	let urls = await fetch(proxyUrl + targetUrl).then(response => response.json());
+    	console.log(urls)
+    	for (var key in urls) {
+    		arrOfLinks.push(urls[key])
+ console.log(arrOfLinks)
+ document.getElementById("1").src=window.arrOfLinks[1];
+}
+
+
+	return urls;
+
+
+
+// let urls = await fetch(proxyUrl + targetUrl).then(response => response.json())
+// 	console.log(urls)
+//  if (urls.ok) { // если HTTP-статус в диапазоне 200-299
+//   let json = await urls.json();
+// }
+//    geturl1()
+ } 
+
+
+
+
+</script>
+
+
+
+</head>
+<body onload="f()">
+
+
+
+<div class="main">
+
+            <div class="top">
+	<a href="login/login.html"><button type="button" class="btn">Войти</button></a>
+                <button type="button" class="btn">Зарегистрироваться</button>
+
+                
+
+
+            </div>
+
+            <div class="menu">
+	
+
+<div class="widget">
+  <h3 class="widget-title">МЕНЮ</h3>
+  <ul>
+    <li><a href="index.html"> <img src="1.png"></a> <a href="index.html"> Главная</a> </li>
+    <li><a href=""> <img src="2.png"> </a> <a href=""> Профиль</a> </li>
+    <li><a href=""><img src="4.png"></a> <a href="">Трансляции</a> </li>
+    <li><a href="forum.html"><img src="6.png"></a> <a href="forum.html">Форум</a> </li>
+    <li><a href=""><img src="3.png"></a> <a href="">Магазин</a> </li>
+    <li><a href=""><img src="5.png"></a> <a href="">Видео</a> </li>
+  </ul>
+</div>
+
+
+
+
+
+            </div>
+           
+
+           <div class="block">
+
+           	<h1>ПРЯМЫЕ ТРАНСЛЯЦИИ</h1>
+
+
+
+                   <div class="stream">
+                   <video style="margin: auto; position: absolute; top: 0px; left:0px; bottom: 0px; right: 0px; max-width: 100%; max-height: 100%;" src="http://46.61.193.124/play/hls/bbb/index.m3u8" autoplay="" controls=""></video>
+                   </div>
+
+                   <div class="stream">
+
+        <video id="1" autoplay='' controls=''> <source type='application/x-mpegURL' src=''> </video>
+
+
+
+
+                  </div>
+
+
+
+                   <div class="stream">
+                   	<video src=" http://46.61.193.124/play/hls/flag/index.m3u8" autoplay="autoplay" controls="controls"></video>
+                   </div>
+
+                   <div class="stream">
+                   	<video src=" http://46.61.193.124/play/hls/flag/index.m3u8" controls="controls"></video>
+                   </div>
+
+                   <!-- <div class="stream">
+                   	<video src="http://46.61.193.124/play/hls/flag/index.m3u8"  controls="controls"></video>
+                   </div>
+                   
+                   <div class="stream">
+                   	<video src="http://46.61.193.124/play/hls/flag/index.m3u8" controls="controls"></video>
+                   </div>
+                   
+                   <div class="stream">
+                   	<video src="http://46.61.193.124/play/hls/flag/index.m3u8" controls="controls"></video>
+                   </div>
+                   
+                   
+                   <div class="stream">
+                   	<video src="http://46.61.193.124/play/hls/flag/index.m3u8"  controls="controls"></video>
+                   </div>
+                    -->
+
+
+
+  <h1>ТОВАР</h1>
+
+
+                   <div class="stream">
+                      <a href="1.html"><img   src="tov.jpg" alt="товар1"></A>
+                   </div>
+
+                   <div class="stream">
+                      <a href="2.html"><img   src="tov2.jpg" alt="товар2"></A>
+                   </div>
+
+                   <div class="stream">
+                      <a href="3.html"><img   src="tov3.jpg" alt="товар3"></A>
+                   </div>
+
+                   <div class="stream">
+                      <a href="4.html"><img   src="tov4.jpg" alt="товар4"></A>
+                   </div>
+
+
+
+
+
+
+
+           </div>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</div>
+
+
+
+
+</body>
+</html>
